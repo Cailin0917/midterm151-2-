@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 確保 Carousel 圖片固定 1280x500 且自適應螢幕 */
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        /* 卡片懸浮懸停視覺 */
+        .custom-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* 卡片圖片固定高度 */
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- 1. Carousel 輪播圖 (四張圖片 1280x500) -->
+    <div id="mainCarousel" class="carousel slide carousel-fade shadow-sm" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="https://picsum.photos/1280/500?random=1" class="d-block w-100" alt="輪播圖 1">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5>第一張輪播圖</h5>
+                    <p class="mb-0">Lorem Picsum 1280x500 影像展示</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="https://picsum.photos/1280/500?random=2" class="d-block w-100" alt="輪播圖 2">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5>第二張輪播圖</h5>
+                    <p class="mb-0">Lorem Picsum 1280x500 影像展示</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="https://picsum.photos/1280/500?random=3" class="d-block w-100" alt="輪播圖 3">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5>第三張輪播圖</h5>
+                    <p class="mb-0">Lorem Picsum 1280x500 影像展示</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="https://picsum.photos/1280/500?random=4" class="d-block w-100" alt="輪播圖 4">
+                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+                    <h5>第四張輪播圖</h5>
+                    <p class="mb-0">Lorem Picsum 1280x500 影像展示</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">上一張</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide-next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">下一張</span>
+        </button>
+    </div>
+
+    <!-- 2. Cards (同一水平列 4 張圖文卡片) -->
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://picsum.photos/600/400?random=5" class="card-img-top" alt="卡片圖 1">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">卡片標題一</h5>
+                        <p class="card-text text-muted flex-grow-1">這是第一張圖文卡片內容描述，採用響應式網格劃分。</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm align-self-start mt-2">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://picsum.photos/600/400?random=6" class="card-img-top" alt="卡片圖 2">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">卡片標題二</h5>
+                        <p class="card-text text-muted flex-grow-1">這是第二張圖文卡片內容描述，採用響應式網格劃分。</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm align-self-start mt-2">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://picsum.photos/600/400?random=7" class="card-img-top" alt="卡片圖 3">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">卡片標題三</h5>
+                        <p class="card-text text-muted flex-grow-1">這是第三張圖文卡片內容描述，採用響應式網格劃分。</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm align-self-start mt-2">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm custom-card">
+                    <img src="https://picsum.photos/600/400?random=8" class="card-img-top" alt="卡片圖 4">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">卡片標題四</h5>
+                        <p class="card-text text-muted flex-grow-1">這是第四張圖文卡片內容描述，採用響應式網格劃分。</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm align-self-start mt-2">查看詳情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Footer (頁尾與水平線) -->
+    <footer class="container my-5 pt-3">
+        <hr class="border-secondary opacity-25 mb-4">
+        <div class="row text-secondary fw-semibold">
+            <div class="col-6 text-start">
+                <span>班級學號：UD2A 1114211063</span>
+            </div>
+            <div class="col-6 text-end">
+                <span>姓名：李家妤</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
